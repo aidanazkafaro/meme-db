@@ -1,0 +1,59 @@
+<%- include('partials/header') -%>
+  
+<body>
+    
+<div class="upload-wrapper">
+
+    <div class="upload bg-white">
+
+        <h4>Upload Any Memes Here</h4>
+        <br>
+        <form class="row g-3" action="/" method="POST" enctype="multipart/form-data">
+
+            <div class="row mb-3">
+                <label for="name" class="col-sm-4 col-form-label">Meme Title</label>
+                <div class="col-sm-10">
+                  <input class="form-control" type="text" id="name" placeholder="" 
+                  value="" name="name" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="desc" class="col-sm-4 col-form-label">Description</label>
+                <div class="col-sm-10">
+                    <textarea 
+                        class="form-control" type="text" id="desc" placeholder="" 
+                        value="" name="desc" required 
+                    >
+                    </textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="author" class="col-sm-4 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input 
+                        class="form-control" type="text" id="author" placeholder="" 
+                        value="" name="author" required 
+                    >
+             
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="image" class="col-sm-4 col-form-label" class="form-label">Upload Meme</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" id="image" 
+                    name="image" value="" required>
+                  </div>
+            </div>
+
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Post</button>
+            </div>
+            
+        </form>
+    </div>
+  
+</div>
+  
+<%- include('partials/footer') -%>
+  

@@ -1,0 +1,18 @@
+
+<%- include('partials/header') -%>
+
+<div class="upload-wrapper">
+    <% items.forEach(function(meme) { %>
+        <div class="upload bg-white">
+            <div class="post-desc">
+                <h4><%= meme.name %></h4>
+                <p><%= meme.desc %></p>
+                <h6>By: <%= meme.author %></h6>
+            </div>
+            <img src="data:image/<%=meme.img.contentType%>;base64,
+                 <%=meme.img.data.toString('base64')%>">
+        </div>
+    <% }) %>
+</div>
+
+<%- include('partials/footer') -%>
